@@ -1,0 +1,46 @@
+$lightPink: #fceeea;
+$darkPink: #f9dcd4;
+
+.register {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $lightPink;
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 30em;
+    gap: 1.5rem;
+
+    input {
+      padding: 15px;
+      border: none;
+      background-color: $darkPink;
+      border-radius: 5px;
+    }
+    textarea:focus,
+    input:focus {
+      outline: none;
+    }
+
+    button {
+      padding: 17px;
+      border: none;
+      background-color: #000000;
+      color: #ffffff;
+      width: 200px;
+      border-radius: 40px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+  }
+}

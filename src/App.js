@@ -1,16 +1,12 @@
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Route,
-  Outlet,
-} from "react-router-dom";
-import Home from "../src/pages/Home";
-import Register from "../src/pages/Register";
-import Login from "../src/pages/Login";
-import Single from "../src/pages/Single";
-import Write from "../src/pages/Write";
-import Navbar from "../src/components/Navbar";
-import Footer from "../src/components/Footer";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import Home from "./pages/Home/Home";
+import Register from "./pages/Register/Register";
+import Login from "./pages/Login/Login";
+import Single from "./pages/Single/Single";
+import Write from "./pages/Write/Write";
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
+import "./style.scss";
 
 //function to create the layout that will use the navbar and footer
 const Layout = () => {
@@ -33,7 +29,7 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/single",
+        path: "/post/:id",
         element: <Single />,
       },
       {
@@ -62,8 +58,10 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <div>
-      <RouterProvider router={router} />
+    <div className="app">
+      <div className="container">
+        <RouterProvider router={router} />
+      </div>
     </div>
   );
 }

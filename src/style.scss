@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "Merchant-Regular";
+  src: url("./fonts/Merchant-Regular.woff");
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  .container {
+    width: 1024px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Merchant-Regular", serif;
+}
